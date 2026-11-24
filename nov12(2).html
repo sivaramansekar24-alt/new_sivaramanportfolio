@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burger Scroll Animation</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #160d08;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        /* Header */
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            padding: 25px 8%;
+            background: #25150e;
+            position: relative;
+            z-index: 10;
+        }
+
+        header h2 {
+            color: orange;
+            letter-spacing: 3px;
+        }
+
+        /* Intro Section */
+
+        .intro {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            gap: 20px;
+        }
+
+        .intro h1 {
+            font-size: 55px;
+            color: orange;
+        }
+
+        .intro p {
+            font-size: 20px;
+            color: #ddd;
+        }
+
+        .arrow {
+            font-size: 45px;
+            margin-top: 30px;
+            animation: bounce 1s infinite alternate;
+        }
+
+        @keyframes bounce {
+            to {
+                transform: translateY(15px);
+            }
+        }
+
+        /* Burger Section */
+
+        .burger-section {
+            height: 200vh;
+            view-timeline-name: --burger;
+            view-timeline-axis: block;
+        }
+
+        .burger-scene {
+            height: 100vh;
+            position: sticky;
+            top: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: radial-gradient(circle, #60351e, #160d08 70%);
+            overflow: hidden;
+        }
+
+        .burger-title {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .burger-title h1 {
+            color: orange;
+            font-size: 35px;
+        }
+
+        .burger-title p {
+            color: #ddd;
+            margin-top: 10px;
+        }
+
+        /* Burger */
+
+        .burger {
+            width: 280px;
+            height: 350px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 3px;
+        }
+
+        /* Common Ingredient Style */
+
+        .ingredient {
+            position: relative;
+            width: 240px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 8px 15px #0008;
+        }
+
+        .ingredient span {
+            color: #fff;
+            font-size: 11px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            opacity: 0;
+            transition: opacity 0.4s;
+        }
+
+        .burger:hover .ingredient span {
+            opacity: 1;
+        }
+
+        /* Top Bun */
+
+        .top-bun {
+            height: 85px;
+            width: 240px;
+            background: linear-gradient(#ffca72, #d98228);
+            border-radius: 120px 120px 20px 20px;
+        }
+
+        .top-bun img {
+            height: 85px;
+            width: 240px;
+            background: linear-gradient(#ffca72, #d98228);
+            border-radius: 120px 120px 20px 20px;
+        }
+
+        /* Lettuce */
+
+        .lettuce {
+            height: 25px;
+            width: 260px;
+            background: #55ad38;
+            border-radius: 50%;
+        }
+
+        .lettuce img {
+            height: 25px;
+            width: 260px;
+            background: #55ad38;
+            border-radius: 50%;
+        }
+
+        /* Tomato */
+
+        .tomato {
+            height: 25px;
+            width: 235px;
+            background: #e83220;
+            border-radius: 50%;
+        }
+
+        .tomato img {
+            height: 25px;
+            width: 235px;
+            background: #e83220;
+            border-radius: 50%;
+        }
+
+        /* Cheese */
+
+        .cheese {
+            height: 20px;
+            width: 245px;
+            background: #ffd83d;
+            clip-path: polygon(0 0, 100% 0, 85% 100%, 15% 100%);
+        }
+
+        .cheese img {
+            height: 20px;
+            width: 245px;
+            background: #ffd83d;
+            clip-path: polygon(0 0, 100% 0, 85% 100%, 15% 100%);
+        }
+
+        /* Patty */
+
+        .patty {
+            height: 65px;
+            width: 245px;
+            background: linear-gradient(#793b1e, #35180c);
+            border-radius: 20px;
+        }
+
+        .patty img {
+            height: 65px;
+            width: 245px;
+            background: linear-gradient(#793b1e, #35180c);
+            border-radius: 20px;
+        }
+
+        /* Bottom Bun */
+
+        .bottom-bun {
+            height: 55px;
+            width: 240px;
+            background: linear-gradient(#e99a43, #bd6b24);
+            border-radius: 15px 15px 70px 70px;
+        }
+
+        .bottom-bun img {
+            height: 55px;
+            width: 240px;
+            background: linear-gradient(#e99a43, #bd6b24);
+            border-radius: 15px 15px 70px 70px;
+        }
+
+        /* Scroll Animation */
+
+        .ingredient {
+            animation-timing-function: linear;
+            animation-fill-mode: both;
+            animation-timeline: --burger;
+            animation-range: entry 0% exit 100%;
+        }
+
+        .top-bun {
+            animation-name: topMove;
+        }
+
+        .lettuce {
+            animation-name: lettuceMove;
+        }
+
+        .tomato {
+            animation-name: tomatoMove;
+        }
+
+        .cheese {
+            animation-name: cheeseMove;
+        }
+
+        .patty {
+            animation-name: pattyMove;
+        }
+
+        .bottom-bun {
+            animation-name: bottomMove;
+        }
+
+        @keyframes topMove {
+            from {
+                transform: translateY(0) rotate(0);
+            }
+
+            to {
+                transform: translateY(-180px) rotate(-12deg);
+            }
+        }
+
+        @keyframes lettuceMove {
+            from {
+                transform: translateY(0);
+            }
+
+            to {
+                transform: translateY(-110px) translateX(-65px) rotate(-15deg);
+            }
+        }
+
+        @keyframes tomatoMove {
+            from {
+                transform: translateY(0);
+            }
+
+            to {
+                transform: translateY(-45px) translateX(75px) rotate(12deg);
+            }
+        }
+
+        @keyframes cheeseMove {
+            from {
+                transform: translateY(0);
+            }
+
+            to {
+                transform: translateY(45px) translateX(-75px) rotate(-15deg);
+            }
+        }
+
+        @keyframes pattyMove {
+            from {
+                transform: translateY(0);
+            }
+
+            to {
+                transform: translateY(110px) translateX(60px) rotate(12deg);
+            }
+        }
+
+        @keyframes bottomMove {
+            from {
+                transform: translateY(0);
+            }
+
+            to {
+                transform: translateY(180px) rotate(10deg);
+            }
+        }
+
+        /* Scroll Text */
+
+        .scroll-text {
+            margin-top: 45px;
+            color: orange;
+            letter-spacing: 3px;
+            font-size: 12px;
+        }
+
+        /* Ending Section */
+
+        .ending {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            gap: 25px;
+        }
+
+        .ending h1 {
+            font-size: 45px;
+            color: orange;
+        }
+
+        .ending p {
+            font-size: 20px;
+        }
+
+        .ending a {
+            color: white;
+            background: #e87820;
+            padding: 15px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h2>BURGER LAB</h2>
+        <p>Scroll to Explore</p>
+    </header>
+
+    <section class="intro">
+        <h1>THE PERFECT BURGER</h1>
+        <p>Scroll down to discover what's inside!</p>
+        <span class="arrow">↓</span>
+    </section>
+
+    <section class="burger-section">
+
+        <div class="burger-scene">
+
+            <div class="burger-title">
+                <h1>EXPLORE THE LAYERS</h1>
+                <p>A perfect combination of ingredients</p>
+            </div>
+
+            <div class="burger">
+
+                <div class="ingredient top-bun">
+                    <img src="image/transparent1.jpg" alt="">
+                </div>
+
+                <div class="ingredient lettuce">
+                    <img src="image/lettuce transparent2.jpg" alt="">
+                </div>
+
+                <div class="ingredient tomato">
+                    <img src="image/tomato 3.jpg" alt="">
+                </div>
+
+                <div class="ingredient cheese">
+                    <img src="image/cheese transparent png4.jpg" alt="">
+                </div>
+
+                <div class="ingredient patty">
+                    <img src="image/patty transparent png5.jpg" alt="">
+                </div>
+
+                <div class="ingredient bottom-bun">
+                    <img src="image/bottom transparent png6.jpg" alt="">
+                </div>
+
+            </div>
+
+            <p class="scroll-text">KEEP SCROLLING TO SPLIT THE BURGER</p>
+
+        </div>
+
+    </section>
+
+    <section class="ending">
+        <h1>THAT'S THE MAGIC OF CSS!</h1>
+        <p>No JavaScript. Just HTML and CSS.</p>
+        <a href="#">Back to Top ↑</a>
+    </section>
+
+</body>
+
+</html>

@@ -1,0 +1,196 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Siva | Portfolio</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    .siva{
+        animation: move 3s ;
+        
+       
+    
+     }
+    
+    @keyframes move{
+        from{
+            transform: 0%;
+            color: rgb(172, 62, 62);
+        }
+        to{
+            transform: 100%;
+            color: burlywood;
+        }
+    }
+    
+    .siva:hover{
+        color: rgb(228, 108, 168);
+    }
+</style>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <h2>SIVARAMAN . S</h2>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#resume">Resume</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- Home -->
+    <section id="home" class="home">
+        <div>
+            <h1 class="siva">Hi, I'm SIVARAMAN  👋</h1>
+
+            <h2>Software Developer</h2>
+
+            <p>
+                I am interested in Web Development,
+                Python Programming and Software Development.
+            </p>
+
+            <a href="#projects" class="btn">View My Projects</a>
+        </div>
+    </section>
+
+
+    <!-- About -->
+    <section id="about">
+        <h1>About Me</h1>
+
+        <p>
+            Hello! I am Sivaraman, a B.Sc Computer Science student.
+            I am learning <mark>HTML, CSS, JavaScript and Python</mark>.
+            My goal is to improve my programming skills and
+            build useful real-world projects.
+        </p>
+    </section>
+
+
+    <!-- Skills -->
+    <section id="skills">
+        <h1>My Skills</h1>
+
+        <div class="skills-container">
+            <div>HTML</div>
+            <div>CSS</div>
+            <div>JavaScript</div>
+            <div>Python</div>
+            <div>React JS</div>
+            <div>SQL</div>
+        </div>
+    </section>
+
+
+    <!-- Projects -->
+    <section id="projects">
+        <h1>My Projects</h1>
+
+        <div class="project-container">
+
+            <div class="project">
+                <h2>Restaurant Website</h2>
+
+                <p>
+                    A restaurant website created using HTML and CSS.
+                </p>
+
+                <button onclick="showMessage()">
+                    View Project
+                </button>
+            </div>
+
+
+            <div class="project">
+                <h2>Login Page</h2>
+
+                <p>
+                    A simple login page created using HTML and CSS.
+                </p>
+
+                <button onclick="showMessage()">
+                    View Project
+                </button>
+            </div>
+
+
+            <div class="project">
+                <h2>Python Project</h2>
+
+                <p>
+                    A beginner Python programming project.
+                </p>
+
+                <button onclick="showMessage()">
+                    View Project
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Resume -->
+    <section id="resume">
+        <h1>My Resume</h1>
+
+        <p>
+            You can download my resume here.
+        </p>
+
+        <a href="Bakkialakshmi Resume (1).pdf" download class="btn">
+            Download Resume
+        </a>
+    </section>
+
+
+    <!-- Contact -->
+    <section id="contact">
+        <h1>Contact Me</h1>
+
+        <form onsubmit="sendMessage(event)">
+
+            <input type="tel"
+                   placeholder="Enter your mobile number "
+                   required maxlength="10">
+
+            <input type="email"
+                   placeholder="Enter your email"
+                   required>
+
+            <textarea
+                placeholder="Enter your message"
+                required></textarea>
+
+            <button type="submit" >
+                Send Message
+            </button>
+
+        </form>
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Siva. All Rights Reserved.</p>
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+
+<!----over8p8rtgio;eakoodop'whiogrpwr;j ---->

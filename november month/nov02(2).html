@@ -1,0 +1,93 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .main {
+        border: solid black;
+        width: 50%;
+        height: 500px;
+        /* align-items: center; */
+        margin-left: 200px;
+        box-sizing: border-box;
+        
+    }
+
+    .btn {
+        /* padding: 20px; */
+        margin-left: 50px;
+        margin-top: 100px;
+        border-radius: 20px;
+        width: 100px;
+        height: 40px;
+        border: solid black;
+        background-color: aquamarine;
+        box-shadow: 3px 3px 3px 3px;
+
+    }
+
+    .btn:hover {
+        background-color: blue;
+        color: white;
+        border-color: rgb(148, 223, 78);
+        /* border: 2px solid; */
+    }
+
+    .btn:active {
+        background-color: bisque;
+        color: red;
+    }
+    .main p {
+        margin: 20px;
+    }
+     .main input {
+        /* margin: 20px; */
+    }
+    .main input:focus{
+        background-color: aquamarine;
+        color: brown;
+        
+    }
+    .main p:nth-child(even){
+        color: rgb(241, 109, 60);
+    }
+   .main h1::first-letter{
+    color: crimson;
+    font-size: 70px;
+   } 
+    h1::selection {
+    background-color: chartreuse;
+    color: white;
+   }
+   p::selection {
+    background-color: rgb(250, 125, 194);
+    color: white;
+   }  
+    
+    
+</style>
+
+<body>
+    <div class="main">
+        <button class="btn">click me</button>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, nemo!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, nemo!</p>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, nemo!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, nemo!</p>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, nemo!</p>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, nemo!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, nemo!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, nemo!</p>
+        <input type="text">
+        <h1>siva</h1>
+
+    </div>
+</body>
+
+</html>

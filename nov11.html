@@ -1,0 +1,55 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <stYle>
+        * {
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+        }
+
+        .siva {
+            background-color: blueviolet;
+            height: 4000px;
+        }
+
+        .box {
+            width: 40px;
+            height: 40px;
+            background-color: aquamarine;
+            animation: move 5s forwards;
+            animation-timeline: scroll();
+            position: fixed;
+        }
+
+        @keyframes move {
+            from {
+                transform: translate(0);
+                /* opacity: 0; */
+
+            }
+
+            to {
+                padding: 500px;
+
+                transform: translate(500px);
+                background-color: green;
+            }
+        }
+
+        /* .box:hover { */
+        /* opacity: ; */
+        /* padding: 30px; */
+        /* } */
+    </stYle>
+</head>
+
+<body>
+    <div class="box"></div>
+    <div class="siva"></div>
+</body>
+
+</html>

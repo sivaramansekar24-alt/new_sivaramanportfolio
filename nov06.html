@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: solid 3px grey;
+            animation: spin 2s infinite linear,
+                       moveBox 5s infinite linear;
+            border-top: 3px solid rgb(77, 77, 218) ;
+            animation-name: moveBox;
+        }
+        @keyframes spin{
+            from {
+            transform:rotate(0deg);
+            }
+            to{
+              transform: rotate(360deg);
+
+            }
+        }
+        @keyframes moveBox{
+            from {
+                transform: translate(0%);
+
+            }
+            to{
+                transform: translate(600px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

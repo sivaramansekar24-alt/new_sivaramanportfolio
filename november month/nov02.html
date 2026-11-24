@@ -1,0 +1,90 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .main {
+        width: 50%;
+        height: 70vh;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        /* grid-template-rows: repeat(5,1fr); */
+        grid-template-areas:
+            "one two three"
+            "four two three"
+            "four five six"
+            "four five seven"
+            "eight nine seven"
+        ;
+        gap: 7px;
+        box-sizing: border-box;
+        border: 5px solid rgb(223, 113, 113);
+
+    }
+
+    .main img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        min-width: 0%;
+        min-height: 0%;
+    }
+
+
+    .card1 {
+        grid-area: one;
+    }
+
+    .card2 {
+        grid-area: two;
+    }
+
+    .card3 {
+        grid-area: three;
+    }
+
+    .card4 {
+        grid-area: four;
+    }
+
+    .card5 {
+        grid-area: five;
+    }
+
+    .card6 {
+        grid-area: six;
+    }
+
+    .card7 {
+        grid-area: seven;
+    }
+
+    .card8 {
+        grid-area: eight;
+    }
+
+    .card9 {
+        grid-area: nine;
+    }
+</style>
+
+<body>
+    <div class="main">
+        <img src="image/image1.jpg" alt="" class="card1">
+        <img src="image/image2.jpg" alt="" class="card2">
+        <img src="image/image3.jpg" alt="" class="card3">
+        <img src="image/image4.jpg" alt="" class="card4">
+        <img src="image/image5.jpg" alt="" class="card5">
+        <img src="image/image6.jpg" alt="" class="card6">
+        <img src="image/image7.jpg" alt="" class="card7">
+        <img src="image/image8.jpg" alt="" class="card8">
+        <img src="image/image9.jpg" alt="" class="card9">
+
+
+    </div>
+</body>
+
+</html>

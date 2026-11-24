@@ -1,0 +1,36 @@
+
+*{
+    margin: 0%;
+    padding: 0;
+}
+#main{
+    height: 800px;
+    background-color: rgb(231, 197, 152);
+    display: flex;
+    justify-content: center;
+
+}
+#top{text-align: center;
+    position: relative;
+    top: 20px;
+
+}
+.box{
+    height: 250px;
+    background-color: aquamarine;
+    position: relative;
+    top: 20px;
+    width: 45%;
+
+    
+}
+.box{
+    height: 250px;
+    background-color: rgb(140, 221, 11);
+    position: relative;
+    top: 20px;
+    width: 45%;
+    justify-content: center;
+
+    
+}

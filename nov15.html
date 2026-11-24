@@ -1,0 +1,61 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+        }
+
+        .box {
+            display: flex;
+            gap: 10px;
+        }
+
+        .box img {
+            height: 200px;
+            width: 200px;
+            object-fit: cover;
+        }
+        .one {
+            filter: sepia(100%);
+        }
+        .two{
+            filter: blur(2px);
+        }
+        .three{
+            filter:grayscale(50%);
+        }
+        .four{
+            filter: brightness(250%);
+        }
+        .five{
+            filter: contrast(400%);
+        }
+        .six{
+            filter: saturate(200%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <img src="image/flower.jpg" alt="" class="one">
+        <img src="image/flower.jpg" alt="" class="two">
+
+        <img src="image/flower.jpg" alt="" class="three">
+
+        <img src="image/flower.jpg" alt="" class="four">
+
+        <img src="image/flower.jpg" alt="" class="five">
+
+        <img src="image/flower.jpg" alt="" class="six">
+
+    </div>
+</body>
+
+</html>

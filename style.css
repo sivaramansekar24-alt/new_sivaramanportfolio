@@ -1,0 +1,234 @@
+```css
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fb;
+    color: #222;
+}
+
+/* Navigation */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 8%;
+
+    background-color: #111827;
+    color: white;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav h2 {
+    color: #7eca37;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #6eaab4;
+}
+
+
+/* Sections */
+
+section {
+    padding: 80px 10%;
+    text-align: center;
+}
+
+section h1 {
+    font-size: 35px;
+    margin-bottom: 25px;
+}
+
+
+/* Home */
+
+.home {
+    min-height: 90vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(
+        135deg,
+        #111827,
+        #2563eb
+    );
+
+    color: white;
+}
+
+#home h1 {
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+
+.home h2 {
+    margin-bottom: 20px;
+}
+
+.home p {
+    max-width: 600px;
+    margin: auto;
+    line-height: 1.7;
+}
+
+
+/* Button */
+
+.btn,
+button {
+    display: inline-block;
+
+    margin-top: 25px;
+    padding: 12px 25px;
+
+    border: none;
+    border-radius: 8px;
+
+    background-color: #00bcd4;
+    color: white;
+
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn:hover,
+button:hover {
+    background-color: #a19e00;
+}
+
+
+/* Skills */
+
+.skills-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.skills-container div {
+    padding: 20px 35px;
+
+    background-color: white;
+
+    border-radius: 10px;
+
+    box-shadow: 0 5px 15px #0002;
+}
+
+
+/* Projects */
+
+.project-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.project {
+    width: 280px;
+
+    padding: 30px;
+
+    background-color: white;
+
+    border-radius: 12px;
+
+    box-shadow: 0 5px 15px #0002;
+}
+
+.project h2 {
+    margin-bottom: 15px;
+}
+
+.project p {
+    line-height: 1.6;
+}
+
+
+/* Contact */
+
+form {
+    max-width: 500px;
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+input,
+textarea {
+    padding: 15px;
+
+    border: 1px solid #ccc;
+    border-radius: 8px;
+
+    font-size: 16px;
+}
+
+textarea {
+    height: 150px;
+    resize: none;
+}
+
+
+/* Footer */
+
+footer {
+    padding: 25px;
+
+    text-align: center;
+
+    background-color: #111827;
+    color: white;
+}
+
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .home h1 {
+        font-size: 40px;
+    }
+
+}
+```
+/* diusdi */

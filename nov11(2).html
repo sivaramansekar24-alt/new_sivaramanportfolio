@@ -1,0 +1,47 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            height: 50px;
+            width: 50px;
+            background-color: purple;
+            animation: move 7s infinite backwards;
+            animation-direction: reverse;
+            text-align: center;
+        }
+        @keyframes move{
+            0%{
+                transform:translate(0px);
+                text-align: center;
+            }
+            25%{
+                background-color: aqua;
+                opacity: 10;
+                 text-align: center;
+                
+                
+            }
+            50%{
+                 background-color: yellowgreen;
+                 padding: 50px;
+                 transform: translate(500px,200px);
+                  text-align: center;
+
+            }
+            100%{
+                transform: translate(900px);
+                 text-align: center;
+            }
+
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box">Siva</div>
+
+</body>
+</html>

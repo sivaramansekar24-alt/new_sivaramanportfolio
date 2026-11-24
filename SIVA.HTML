@@ -1,0 +1,390 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Siva Restaurant</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">
+                🍴 Siva 
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#reservation">Reservation</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+        </nav>
+    </header>
+
+
+    <!-- ================= HOME ================= -->
+
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+
+            <h1>Welcome to Siva Restaurant</h1>
+
+            <p>
+                Delicious Food • Great Taste • Happy Moments
+            </p>
+
+            <a href="#menu" class="btn">
+                Explore Menu
+            </a>
+
+            <a href="#reservation" class="btn second-btn">
+                Book a Table
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section id="about" class="about">
+
+        <div class="about-text">
+
+            <h2>About Our Restaurant</h2>
+
+            <p>
+                Welcome to siva Restaurant.
+                We serve delicious and fresh food prepared
+                with high-quality ingredients.
+            </p>
+
+            <p>
+                Our goal is to give every customer a wonderful
+                dining experience with great food and friendly service.
+            </p>
+
+            <button class="btn" onclick="showMessage()">
+                Learn More
+            </button>
+
+        </div>
+
+        <div class="about-box">
+            🍛
+        </div>
+
+    </section>
+
+
+    <!-- ================= MENU ================= -->
+
+    <section id="menu" class="menu-section">
+
+        <h2>Our Popular Menu</h2>
+
+        <p class="section-text">
+            Taste our most popular dishes
+        </p>
+
+        <div class="menu-container">
+
+            <div class="food-card">
+
+                <div class="food-image">
+                    🍕
+                </div>
+
+                <h3>Cheese Pizza</h3>
+
+                <p>
+                    Fresh cheese pizza with delicious toppings.
+                </p>
+
+                <h4>₹299</h4>
+
+                <button onclick="addToCart('Cheese Pizza', 299)">
+                    Add to Cart
+                </button>
+
+            </div>
+
+
+            <div class="food-card">
+
+                <div class="food-image">
+                    🍔
+                </div>
+
+                <h3>Chicken Burger</h3>
+
+                <p>
+                    Crispy chicken burger with fresh vegetables.
+                </p>
+
+                <h4>₹199</h4>
+
+                <button onclick="addToCart('Chicken Burger', 199)">
+                    Add to Cart
+                </button>
+
+            </div>
+
+
+            <div class="food-card">
+
+                <div class="food-image">
+                    🍝
+                </div>
+
+                <h3>Italian Pasta</h3>
+
+                <p>
+                    Creamy Italian pasta with special sauce.
+                </p>
+
+                <h4>₹249</h4>
+
+                <button onclick="addToCart('Italian Pasta', 249)">
+                    Add to Cart
+                </button>
+
+            </div>
+
+
+            <div class="food-card">
+
+                <div class="food-image">
+                    🍛
+                </div>
+
+                <h3>Chicken Biryani</h3>
+
+                <p>
+                    Traditional spicy chicken biryani.
+                </p>
+
+                <h4>₹299</h4>
+
+                <button onclick="addToCart('Chicken Biryani', 299)">
+                    Add to Cart
+                </button>
+
+            </div>
+
+
+            <div class="food-card">
+
+                <div class="food-image">
+                    🍜
+                </div>
+
+                <h3>Veg Noodles</h3>
+
+                <p>
+                    Delicious noodles with fresh vegetables.
+                </p>
+
+                <h4>₹149</h4>
+
+                <button onclick="addToCart('Veg Noodles', 149)">
+                    Add to Cart
+                </button>
+
+            </div>
+
+
+            <div class="food-card">
+
+                <div class="food-image">
+                    🍰
+                </div>
+
+                <h3>Chocolate Cake</h3>
+
+                <p>
+                    Soft and delicious chocolate cake.
+                </p>
+
+                <h4>₹129</h4>
+
+                <button onclick="addToCart('Chocolate Cake', 129)">
+                    Add to Cart
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CART ================= -->
+
+    <section class="cart">
+
+        <h2>🛒 Your Cart</h2>
+
+        <div id="cart-items">
+            Cart is empty
+        </div>
+
+        <h3>
+            Total: ₹<span id="total">0</span>
+        </h3>
+
+        <button class="btn" onclick="checkout()">
+            Checkout
+        </button>
+
+    </section>
+
+
+    <!-- ================= GALLERY ================= -->
+
+    <section id="gallery" class="gallery">
+
+        <h2>Food Gallery</h2>
+
+        <div class="gallery-container">
+
+            <div>🍕</div>
+            <div>🍔</div>
+            <div>🍝</div>
+            <div>🍛</div>
+            <div>🍜</div>
+            <div>🍰</div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= RESERVATION ================= -->
+
+    <section id="reservation" class="reservation">
+
+        <h2>Book Your Table</h2>
+
+        <form id="reservationForm">
+
+            <input
+                type="number"
+                id="name"
+                placeholder="Your Name"
+                required
+            >
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Your Email"
+                required
+            >
+
+            <input
+                type="tel"
+                id="phone"
+                placeholder="Phone Number"
+                required
+            >
+
+            <input
+                type="date"
+                id="date"
+                required
+            >
+
+            <input
+                type="time"
+                id="time"
+                required
+            >
+
+            <input
+                type="number"
+                id="people"
+                placeholder="Number of People"
+                min="1"
+                max="20"
+                required
+            >
+              <input type="text" placeholder="LOCATION">
+
+            <button type="submit" class="btn">
+                Reserve Table
+            </button>
+
+        </form>
+
+        <p id="reservation-message"></p>
+
+    </section>
+
+
+    <!-- ================= CONTACT ================= -->
+
+    <section id="contact" class="contact">
+
+        <h2>Contact Us</h2>
+
+        <div class="contact-container">
+
+            <div>
+                <h3>📍 Address</h3>
+                <p>kandhalavadi,villupuram, Tamil Nadu, India</p>
+            </div>
+
+            <div>
+                <h3>📞 Phone</h3>
+                <p>+91 9025978277</p>
+            </div>
+
+            <div>
+                <h3>📧 Email</h3>
+                <p>siva@gmail.com</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <h2>🍴 siva</h2>
+
+        <p>
+            Delicious food for wonderful moments.
+        </p>
+
+        <p>
+            © 2026 Siva Restaurant
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+    <a=
+</body>
+</html>
+```
