@@ -26,6 +26,9 @@
             align-items: center;
             padding: 0 50px;
             height: 100px;
+            position: sticky;
+            top: 0;
+
         }
 
         .siva {
@@ -56,20 +59,53 @@
             align-items: center;
 
         }
-        .mm{
-           animation: move 4s ; 
+
+        .mm {
+            animation: move 4s;
         }
-        @keyframes move{
-            from{
+
+        @keyframes move {
+            from {
                 transform: translateX(-500px);
                 color: aquamarine;
 
             }
-            to{
+
+            to {
                 transform: translateX(0px);
             }
         }
-        
+
+        .mm:hover {
+            color: bisque;
+        }
+
+        /* about */
+        .about {
+            height: 400px;
+            width: 100%;
+            /* background-color: aquamarine; */
+            display: flex;
+            flex-direction: column;
+            color: black;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+        }
+        .skill{
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+        .box{
+            border: solid black;
+            height: 50px;
+            width: 100px;
+            border-radius: 5px;
+            box-shadow: 3 4 4 2;
+        }
+
     </style>
 </head>
 
@@ -103,10 +139,30 @@
         <!-- about us  -->
         <section>
             <div class="about">
-                <h1>About</h1>
+                <h1>About Me</h1>
+                <p>Hello! I am Sivaraman, a B.Sc Computer Science student. I am learning HTML, CSS, JavaScript
+                    ,Bootstrap,React js,Django,PostgreSql and Python. My goal is to improve my programming skills and
+                    build useful real-world projects.</p>
+
 
             </div>
         </section>
+        <!-- skill -->
+        <section>
+            <h1 class="hhh">Skills</h1>
+            <div class="skill">
+                
+                <h3 class="box">html</h3>
+                <h3 class="box">html</h3>
+                <h3 class="box">html</h3>
+                <h3 class="box">html</h3>
+                <h3 class="box">html</h3>
+                <h3 class="box">html</h3>
+                <h3 class="box">html</h3>
+
+            </div>
+        </section>
+
     </div>
 </body>
 
