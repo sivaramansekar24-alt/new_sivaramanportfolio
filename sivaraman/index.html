@@ -203,9 +203,7 @@
             border-radius: 50%;
             border: 3px solid var(--purple);
 
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            overflow: hidden; /* FIX: image circle-ku veliya poga koodathu */
 
             background: linear-gradient(135deg,
                     #1e1b4b,
@@ -218,8 +216,13 @@
             animation: float 4s ease-in-out infinite;
         }
 
-        .profile span {
-            font-size: 100px;
+        /* FIX: image circle-a full-a fill pannum (size maarina automatic-a adjust aagum) */
+        .profile img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;            /* stretch aagaama crop aagum */
+            object-position: center top;  /* face cut aagaama irukka */
+            display: block;
         }
 
         /* ================= COMMON SECTION ================= */
@@ -652,10 +655,6 @@
                 height: 200px;
             }
 
-            .profile span {
-                font-size: 70px;
-            }
-
             .section-title {
                 font-size: 30px;
                 margin-bottom: 35px;
@@ -814,7 +813,8 @@
         </div>
 
         <div class="profile">
-            <span>👨🏻‍💻</span>
+            <!-- FIX: image-a "image" folder la profile.png nu rename panni podu -->
+            <img src="Polished Professional Portfolio Portrait.pngi" alt="Sivaraman - Software Developer">
         </div>
 
     </section>
@@ -977,10 +977,9 @@
                         <h3>Email</h3>
 
                         <p>
-                            <a href="mailto:sivaramansekar24@gmail.com
-">
+                            <!-- FIX: href quote same line la close pannirukken -->
+                            <a href="mailto:sivaramansekar24@gmail.com">
                                 sivaramansekar24@gmail.com
-
                             </a>
                         </p>
                     </div>
@@ -1013,6 +1012,7 @@
                         <h3>GitHub</h3>
 
                         <p>
+                            <!-- "yourusername"-a un real GitHub username ku maathu -->
                             <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
                                 Visit My GitHub
                             </a>
@@ -1031,6 +1031,7 @@
                         <h3>LinkedIn</h3>
 
                         <p>
+                            <!-- "yourusername"-a un real LinkedIn username ku maathu -->
                             <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">
                                 Visit My LinkedIn
                             </a>
@@ -1075,7 +1076,6 @@
 
     <script>
         // Backend illaama form work aaga: user mail app-la message ready-a open aagum.
-        // yourmail@gmail.com-a unga real email-ku maathunga.
         var MY_EMAIL = "sivaramansekar24@gmail.com";
 
         document.getElementById("contactForm").addEventListener("submit", function (e) {
